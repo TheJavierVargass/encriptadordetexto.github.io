@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Encriptador y desencriptador de texto</title>
+    <link rel="stylesheet" href="styles.css" />
+    </head>
+  <body>
+    <div class="header">
+      <h1 class="header_logo">Encriptador y desencriptador de texto</h1>
+      <img class="pequeña" src="img/a.png" />
+    </div>
+    <div class="offset">
+      <p></p>
+    </div>
+    <div class="container"> 
+      <div class="encriptar">
+        <textarea
+          name="texto"
+          class="texto"
+          type="text"
+          id="inputText"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa el texto aquí"
+        ></textarea>
+        <div class="opcionesredo">
+          <label>
+            <input type="radio" name="operation" value="encrypt" checked>
+            Encriptar
+          </label>
+          <label>
+            <input type="radio" name="operation" value="decrypt">
+            Desencriptar
+          </label>
+        </div>
+
+        <div class="botones">
+          <button class="boton1" type="button" onclick="executeOperation()">Ejecutar </button>
+          <button class="boton1" type="button" onclick="copyResult()">Copiar resultado </button>
+        </div>
+
+      </div>
+      <div class="encriptado">
+        <img src="img/muñeco.png" alt="" id="muñeco" />
+        <div class="mensaje-encriptado" id="mensaje-encriptado">
+          <h2 id="titulo-mensaje">Resultado:</h2>
+          <label>
+            <textarea id="outputText" rows="9" cols="35" readonly></textarea>
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>
+        <footer>
+          <div class="pie">
+          <p>© 2023 Javier Vargas. Todos los derechos reservados.</p>
+          <p>Desarrollado por Javier Vargas</p>
+          <p>Challenge ONE Sprint 01</p>
+      </div>
+    </footer> 
+  <!-- Conectar con archio javas -->
+  <script src="index.js"></script>
+</html>

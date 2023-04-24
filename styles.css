@@ -1,0 +1,249 @@
+/* toda la pagina darle estilo */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: "Inter";
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f3f5fc;
+}
+
+.texto {
+  position: absolute;
+  width: 72%;
+  height: 60%;
+  left: 12%;
+  top: 15%;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background-color: #f3f5fc;
+}
+
+.texto::placeholder {
+  color: #0a3871;
+}
+
+.texto:focus,
+.texto:active {
+  border: none;
+  outline: none;
+}
+
+.opcionesredo {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 70px;
+  position: absolute;
+  width: 100%;
+  left: 15%;
+  top: 72%;
+  font-weight: 100;
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--form-background);
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1% 0;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 82%;
+}
+
+.boton1 {
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 25%;
+  background-color: #0a3871;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-size: 30px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.boton1:hover {
+  color: #fff;
+  background-color: #04a8ef;
+  filter: drop-shadow(0 0 20px #0a3871) contrast(2) brightness(2);
+}
+
+.encriptado {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 30%;
+  height: 85%;
+  left: 60%;
+  top: 8%;
+  background: #fff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+
+.mensaje-encriptado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 18px;
+  position: absolute;
+  width: 100%;
+  top: 65%;
+  text-align: center;
+
+}
+
+.mensaje-encriptado h2 {
+  width: 60%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #343a40;
+}
+
+.encriptado img {
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  top: 15%;
+}
+
+.texto{
+  display: flex;
+  position: absolute;
+  background: #fff;;
+  border-radius: 25px;
+  font-weight: 600;
+  width: 50%;
+  height: 60%;
+  left: 5%;
+  top: 8%;
+}
+
+.container h1{
+  color: #0a3871;;
+}
+
+/* encabezado con scroll */
+
+.offset {
+  margin-top: 0;
+  padding-top: 270px;
+  text-align: center;
+  transition: .3s;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 250px;
+  font-weight: bold;
+  text-align: center;
+  background: #2a7ae4;
+  color: #ffffff;
+  transition: .3s;
+  // header shrinks when .small added to .header
+  &.small {
+    height: 70px;
+    box-shadow: 0 0 5px rgba(black, .2);
+    // when header.small also change page offset
+    & ~ .offset {
+      padding-top: 140px;
+    }
+    // when header.small change logo pad & font size
+    .header_logo {
+      padding-top: 20px;
+      font-size: 20px;
+      text-shadow: none;
+    }
+  }
+}
+
+.header_logo {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  font-size: 50px;
+  text-shadow: 3px 4px rgba(rgb(0, 0, 0), .1);
+  transition: .3s;
+}
+
+img.pequeña{
+  width: 100px;
+  height: 100px;
+}
+
+.pie{
+  position: static;
+  width: 100%;
+  height: 200px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 80px;
+  font-size: 50px;
+  background: #2a7ae4;
+  color: #ffffff;
+}
